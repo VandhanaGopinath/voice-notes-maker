@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoiceNotes — Deepgram Transcriber</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div>
+        <div class="logo">Voice<span>Notes</span></div>
+        <div class="tagline">Deepgram Transcription Engine</div>
+      </div>
+      <div class="balance-card" onclick="fetchBalance()" title="Click to refresh balance">
+        <div class="balance-icon">💳</div>
+        <div>
+          <div class="balance-label">Wallet Balance</div>
+          <div class="balance-amount loading" id="balanceDisplay">—</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Recording Card -->
+    <div class="record-card">
+      <div class="record-btn-wrap">
+        <button class="record-btn" id="recordBtn" onclick="toggleRecording()">
+          <span id="recordIcon">🎙️</span>
+        </button>
+      </div>
+
+      <div class="timer" id="timer">00:00</div>
+
+      <div class="waveform" id="waveform">
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+        <div class="wave-bar"></div><div class="wave-bar"></div>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Click the mic to start recording</span>
+      </div>
+    </div>
+
+    <!-- Live Transcript -->
+    <div class="transcript-card">
+      <div class="card-header">
+        <div class="card-title">02 — Transcript</div>
+        <div class="card-actions">
+          <button class="small-btn" onclick="saveNote()" id="saveBtn" disabled>+ Save Note</button>
+          <button class="small-btn" onclick="clearTranscript()">Clear</button>
+        </div>
+      </div>
+      <div class="transcript-display" id="transcriptDisplay">
+        <span class="transcript-placeholder">✦ Your transcription will appear here after recording...</span>
+      </div>
+      <div class="word-count" id="wordCount"></div>
+    </div>
+
+    <!-- Saved Notes -->
+    <div class="transcript-card">
+      <div class="card-header">
+        <div class="card-title">03 — Saved Notes</div>
+        <div class="card-actions">
+          <button class="small-btn" onclick="exportNotes()">Export .txt</button>
+          <button class="small-btn" onclick="clearAllNotes()">Clear All</button>
+        </div>
+      </div>
+      <div class="notes-list" id="notesList">
+        <div class="empty-state">
+          <div class="empty-icon">📝</div>
+          No saved notes yet. Record and save your first voice note.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span id="toastIcon">✓</span>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
