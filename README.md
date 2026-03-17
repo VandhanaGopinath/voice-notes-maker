@@ -93,7 +93,7 @@ The browser never touches Deepgram directly, so there are no CORS errors.
 ## ✨ Features
 
 - 🎙️ Record audio in-browser with start/stop controls\
-- 
+  
 <img width="732" height="889" alt="1" src="https://github.com/user-attachments/assets/f3db2adb-aecb-4970-9701-2fff6904540e" />
 
 - 📝 Real-time transcript display after each recording
@@ -108,12 +108,14 @@ The browser never touches Deepgram directly, so there are no CORS errors.
 - 💾 Save, manage, and delete notes (persisted via `localStorage`)
 
   
-![Uploading 4.png…]()
+<img width="748" height="434" alt="4" src="https://github.com/user-attachments/assets/7872495b-c34b-4c99-a143-498b2ae15b16" />
+
 
 
 - 📤 Export all notes as `.txt`
 
-  ![Uploading 5.png…]()
+<img width="1313" height="416" alt="5" src="https://github.com/user-attachments/assets/42f869cc-f89f-4c6a-b28d-b4b2e4ba370c" />
+
 
 - 📱 Responsive design, works on mobile
 
